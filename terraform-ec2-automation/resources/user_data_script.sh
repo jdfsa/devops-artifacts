@@ -11,8 +11,7 @@ sudo yum install java-17-amazon-corretto -y
 sudo yum remove python3 -y
 amazon-linux-extras | grep python
 sudo amazon-linux-extras install python3.8 -y
-sudo rm /usr/bin/python
-sudo ln -s /usr/bin/python3.8 /usr/bin/python
+sudo ln -s /usr/bin/python3.8 /usr/bin/python3
 
 # installing jenkins
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
