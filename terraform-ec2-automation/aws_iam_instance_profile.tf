@@ -1,10 +1,10 @@
 resource "aws_iam_instance_profile" "default" {
-  name = "SSMInstanceProfile"
+  name = "EC2SSMInstanceProfile"
   role = resource.aws_iam_role.this.name
 }
 
 resource "aws_iam_role" "this" {
-  name               = "EC2SSMPermissions"
+  name               = "EC2SSMInstanceProfileRole"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
